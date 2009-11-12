@@ -1,0 +1,16 @@
+; Here are some sample things you can do
+(setf d (make-instance 'dictionary :name 'che))
+(size d)
+(isEmpty d)
+(insertItem d 'che 'hungry)
+(size d)
+(isEmpty d)
+(insertItem d 'john 'fat)
+(find2 d 'che)
+(find2 d 'b)
+
+; And if you use the restricted dictionary
+(setf e (make-instance 'restricted-dictionary :name 'che))
+(insertItem e 'che 'sleepy)
+(insertItem e 'che 'tired) ; Should give a duplicate key error
+(insertItem e 'john 'john) ; Should give a key=value error
